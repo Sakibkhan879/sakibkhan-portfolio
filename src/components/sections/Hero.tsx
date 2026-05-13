@@ -195,33 +195,32 @@ export function Hero() {
           }}
         />
 
-        <div className="pointer-events-none absolute left-6 top-24 text-accent md:left-10 md:top-28">
-          <HudFrame corner="tl" size={26} />
+        <div className="pointer-events-none absolute left-4 top-28 text-accent md:left-10 md:top-28">
+          <HudFrame corner="tl" size={22} />
         </div>
-        <div className="pointer-events-none absolute right-6 top-24 text-accent md:right-10 md:top-28">
-          <HudFrame corner="tr" size={26} />
+        <div className="pointer-events-none absolute right-4 top-28 text-accent md:right-10 md:top-28">
+          <HudFrame corner="tr" size={22} />
         </div>
-        <div className="pointer-events-none absolute bottom-14 left-6 text-accent md:bottom-16 md:left-10">
-          <HudFrame corner="bl" size={26} />
+        <div className="pointer-events-none absolute bottom-20 left-4 text-accent md:bottom-16 md:left-10">
+          <HudFrame corner="bl" size={22} />
         </div>
-        <div className="pointer-events-none absolute bottom-14 right-6 text-accent md:bottom-16 md:right-10">
-          <HudFrame corner="br" size={26} />
+        <div className="pointer-events-none absolute bottom-20 right-4 text-accent md:bottom-16 md:right-10">
+          <HudFrame corner="br" size={22} />
         </div>
 
         <div
           ref={heroTextRef}
-          className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-start gap-5 px-6 pb-24 md:px-12 md:pb-28"
+          className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-start gap-3 px-5 pb-28 sm:gap-4 md:px-12 md:pb-28"
           style={{ transition: "opacity 80ms linear" }}
         >
           <EyebrowBadge>SAKIB KHAN // PORTFOLIO // ONLINE</EyebrowBadge>
-          <h1 className="max-w-[14ch] font-sans text-5xl font-semibold leading-[0.95] tracking-tighter text-foreground md:text-7xl lg:text-8xl">
+          <h1 className="max-w-[14ch] font-sans text-4xl font-semibold leading-[0.95] tracking-tighter text-foreground sm:text-5xl md:text-7xl lg:text-8xl">
             Hi, I'm
             <br />
             <span className="text-accent">Sakib Khan.</span>
           </h1>
-          <p className="max-w-[42ch] font-sans text-sm leading-relaxed text-zinc-300 md:text-base">
-            Full-stack developer passionate about building clean,
-            performant web experiences. Scroll to explore my work.
+          <p className="max-w-[38ch] font-sans text-xs leading-relaxed text-zinc-300 sm:text-sm md:text-base">
+            Full-stack developer passionate about building clean web experiences.
           </p>
         </div>
 
@@ -244,9 +243,9 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="pointer-events-none absolute left-6 top-20 z-10 flex items-center gap-2 md:left-10 md:top-24">
-          <div className="h-px w-8 bg-accent/60" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-zinc-300">
+        <div className="pointer-events-none absolute left-4 top-36 z-10 flex items-center gap-2 md:left-10 md:top-24">
+          <div className="h-px w-6 bg-accent/60 md:w-8" />
+          <span className="font-mono text-[9px] uppercase tracking-[0.32em] text-zinc-300 md:text-[10px]">
             Status &mdash; Open to Work
           </span>
         </div>
@@ -254,14 +253,14 @@ export function Hero() {
         
 
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10">
-          <div className="mx-6 mb-3 h-px bg-white/10 md:mx-10">
+          <div className="mx-5 mb-2 h-px bg-white/10 md:mx-10 md:mb-3">
             <div
               ref={progressFillRef}
               className="h-full origin-left bg-accent"
               style={{ transform: "scaleX(0)", transition: "transform 80ms linear" }}
             />
           </div>
-          <div className="mx-6 flex items-center justify-center pb-4 font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-500 md:mx-10">
+          <div className="mx-5 flex items-center justify-center pb-3 font-mono text-[9px] uppercase tracking-[0.28em] text-zinc-500 md:mx-10 md:pb-4 md:text-[10px]">
             <span>Scroll &darr;</span>
           </div>
         </div>
@@ -270,14 +269,14 @@ export function Hero() {
           const visible = visibleCards.has(d.id);
           const position =
             d.id === "d1"
-              ? "top-[22%] right-6 md:right-12"
+              ? "top-[18%] right-6 md:right-12"
               : d.id === "d2"
-              ? "top-1/2 -translate-y-1/2 right-6 md:right-12"
-              : "bottom-24 right-6 md:bottom-28 md:right-12";
+              ? "top-[42%] -translate-y-1/2 right-6 md:right-12"
+              : "bottom-[30%] right-6 md:bottom-28 md:right-12";
           return (
             <div
               key={d.id}
-              className={`pointer-events-none absolute ${position} z-20 hidden w-[420px] max-w-[90vw] md:block`}
+              className={`pointer-events-none absolute ${position} z-20 hidden md:block`}
             >
               <figure
                 className={`card-surface pointer-events-auto p-6 transition-all duration-400 ease-out ${
@@ -298,7 +297,7 @@ export function Hero() {
           );
         })}
 
-        <div className="pointer-events-none absolute inset-x-0 top-[38%] z-20 flex flex-col gap-3 px-6 md:hidden">
+        <div className="pointer-events-none absolute inset-x-0 top-[28%] z-20 flex flex-col gap-2 px-4 md:hidden">
           {DIALOGUES.map((d) => {
             const visible = visibleCards.has(d.id);
             return (
